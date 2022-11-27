@@ -1,4 +1,4 @@
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+Mono&pause=1000&color=fd8c73&width=435&lines=Hi%2C+I'm+Umut+Polat;I'm+a+Creative+Developer.+;I'm+interested+in+Computer+Art.)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+Mono&pause=1000&color=fd8c73&width=435&lines=Hi%2C+I'm+Umut+Polat;I'm+a+Creative+Developer.+;I'm+interested+in+JS.+Frameworks.)
 <img src="https://thumbs.gfycat.com/TanDapperBorderterrier.webp" alt="" width="200" height="200" align="right">
 <h4 align="left" style="color:red;">A passionate frontend developer from Istanbul.Currently, I am trying to develop projects and participate in new formations to become a full stack developer.</h4>
 
