@@ -73,7 +73,7 @@
 <br clear="both">
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/c409f5d59390510f9324ff4b1b9c1ac14950106b/public/assets/snake.svg" alt="Snake animation" />
+<img src="https://github.com/Umut-Polat-GM/Umut-Polat-GM/blob/output/github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
 ###
