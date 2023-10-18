@@ -1,5 +1,5 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Roboto+Mono&pause=1000&color=fd8c73&width=435&lines=Hi%2C+I'm+Umut+Polat;I'm+a+Creative+Developer.+;I'm+interested+in+JS.+Frameworks.)
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGwxZnN0Mnd2anlraThkY2xjMXI0NzUwMzFsdThjZjNnN3gyejVvbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2IudUHdI075HL02Pkk/giphy.gif" alt="" width="200" height="200" align="right">
+<img src="https://media2.giphy.com/media/0lGd2OXXHe4tFhb7Wh/giphy.gif?cid=ecf05e471mfw1t6l5qwdy5rpbr498nxbwkvkug9bggfqsnsp&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" width="200" height="200" align="right">
 <h4 align="left" style="color:red;">A passionate frontend developer from Istanbul.Currently, I am trying to develop projects and participate in new formations to become a full stack developer.</h4>
 
 
