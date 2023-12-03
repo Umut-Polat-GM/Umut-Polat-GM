@@ -1,17 +1,17 @@
-name: generate animation
+name: Generate Animation
 
 on:
-  # Her 12 saatte bir otomatik olarak çalıştır
   schedule:
+    # Her 12 saatte bir otomatik olarak çalıştır
     - cron: "0 */12 * * *"
-  
-  # İstediğiniz zaman işlemi manuel olarak çalıştırma izni ver
+
   workflow_dispatch:
-  
-  # master dalına her itme işlemi olduğunda çalıştır
+    # İstediğiniz zaman işlemi manuel olarak çalıştırma izni ver
+
   push:
+    # master dalına her itme işlemi olduğunda çalıştır
     branches:
-    - master
+      - master
 
 jobs:
   generate:
@@ -20,8 +20,22 @@ jobs:
     
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2  # Deposunuzun kodunu çekmek için kullanılır
+        uses: actions/checkout@v2
+        # Deposunuzun kodunu çekmek için kullanılır
       
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Install Dependencies
+        run: npm install
+        # Proje bağımlılıklarını yükler
+
       - name: Generate GitHub Contribution Grid Snake
         uses: Platane/snk/svg-only@v2
         with:
@@ -29,12 +43,24 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      
+        # GitHub katkı ızgarasını animasyonlu bir yılan şeklinde SVG olarak oluşturur
+
+      - name: Optimize SVG Output
+        run: npx svgo dist/*.svg
+        # SVG dosyalarını optimize ederek boyutlarını azaltır
+
       - name: Push to Output Branch
-        if: success()  # Önceki adım başarılıysa devam et
+        if: success()
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Önceki adımlar başarılıysa, sonuçları 'output' dalına it
+
+      - name: Notify on Failure
+        if: failure()
+        run: echo "Workflow failed. Check the logs for details."
+        # Eğer iş akışı başarısız olursa, hata bildirimi yap
+        
